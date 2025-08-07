@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Hoyas Support</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        background: linear-gradient(135deg, #f8fffe 0%, #e8f5e8 100%);
+        color: #2d5a3d;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Background circles for visual depth */
+      body::before,
+      body::after {
+        content: '';
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      body::before {
+        width: 400px;
+        height: 400px;
+        background: #e8f5e8;
+        opacity: 0.3;
+        top: -200px;
+        right: -200px;
+      }
+
+      body::after {
+        width: 300px;
+        height: 300px;
+        background: #d4edda;
+        opacity: 0.2;
+        bottom: -150px;
+        left: -150px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(69, 158, 122, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 237, 218, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        color: #2d5a3d;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #4ade80;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 40px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+        padding: 24px;
+        background: rgba(248, 255, 254, 0.8);
+        border-radius: 16px;
+        border: 1px solid rgba(212, 237, 218, 0.5);
+      }
+
+      .section h2 {
+        color: #2d5a3d;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4ade80;
+        display: inline-block;
+      }
+
+      .faq-item {
+        margin-bottom: 24px;
+        padding: 20px;
+        background: rgba(232, 245, 232, 0.5);
+        border-radius: 12px;
+        border-left: 4px solid #4ade80;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: #2d5a3d;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .faq-answer {
+        color: #2d5a3d;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .contact-info {
+        background: rgba(74, 222, 128, 0.1);
+        padding: 24px;
+        border-radius: 12px;
+        border: 2px solid #4ade80;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .email-link {
+        color: #4ade80;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .email-link:hover {
+        color: #2d5a3d;
+        text-decoration: underline;
+      }
+
+      .tips-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tips-list li {
+        padding: 16px 20px;
+        margin-bottom: 12px;
+        background: rgba(232, 245, 232, 0.5);
+        border-radius: 12px;
+        border-left: 4px solid #4ade80;
+        position: relative;
+        padding-left: 50px;
+      }
+
+      .tips-list li::before {
+        content: "💡";
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        font-size: 18px;
+      }
+
+      .response-time {
+        background: rgba(248, 255, 254, 0.9);
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid #d4edda;
+        margin-top: 16px;
+        text-align: center;
+        font-size: 14px;
+        color: #6b8e7a;
+      }
+
+      .links-section {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .policy-link {
+        color: #4ade80;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 12px 24px;
+        border: 2px solid #4ade80;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .policy-link:hover {
+        background: #4ade80;
+        color: white;
+      }
+
+      .hero-text {
+        text-align: center;
+        color: #6b8e7a;
+        font-size: 16px;
+        margin-bottom: 40px;
+        line-height: 1.5;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 16px;
+        }
+
+        .container {
+          padding: 24px;
+          border-radius: 16px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .section {
+          padding: 20px;
+        }
+
+        .tips-list li {
+          padding-left: 45px;
+        }
+
+        .links-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        body::before,
+        body::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Support</h1>
+      <div class="subtitle">Healthy Hoyas</div>
+      <p class="hero-text">
+        We're here to help you on your wellness journey. Find answers to common questions below,
+        or reach out to our support team for personalized assistance.
+      </p>
+
+      <!-- FAQ Section -->
+      <div class="section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I log my meals and track nutrition?</div>
+          <div class="faq-answer">
+            Tap the "Food Log" tab, then use "+ Add Meal" to search for foods using our USDA database.
+            You can log breakfast, lunch, dinner, and snacks with detailed nutritional information.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I change my nutrition goals after setting them up?</div>
+          <div class="faq-answer">
+            Yes! Go to the "Settings" tab and update your calorie goals, macro percentages, and micronutrient targets.
+            Changes will apply immediately to your daily tracking.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I delete my account and data?</div>
+          <div class="faq-answer">
+            You can permanently delete your account from the "Settings" tab. This will remove all your data
+            including meal logs, weight tracking, and profile information from our servers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Troubleshooting Section -->
+      <div class="section">
+        <h2>Troubleshooting Tips</h2>
+        <ul class="tips-list">
+          <li>
+            <strong>App not loading?</strong> Try closing and reopening the app, or restart your device if the issue persists.
+          </li>
+          <li>
+            <strong>Food search not working?</strong> Check your internet connection. The USDA food database requires an
+  active connection.
+          </li>
+          <li>
+            <strong>Data not syncing?</strong> Make sure you're signed in to your account and have a stable internet
+  connection.
+          </li>
+          <li>
+            <strong>Forgot your password?</strong> Use the "Forgot Password" link on the login screen to reset it via email.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="section">
+        <h2>Contact Support</h2>
+        <div class="contact-info">
+          <p>Need more help? We're here for you!</p>
+          <p>
+            <a href="mailto:alex@freund25.com?subject=Healthy Hoyas Support" class="email-link">
+              📧 alex@freund25.com
+            </a>
+          </p>
+          <div class="response-time">
+            <strong>Response Time:</strong> We typically respond within 24-48 hours during business days.
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Links Section -->
+      <div class="section">
+        <h2>Legal & Privacy</h2>
+        <p style="text-align: center; color: #6b8e7a; margin-bottom: 20px;">
+          Learn more about how we protect your data and our terms of service.
+        </p>
+        <div class="links-section">
+          <a href="https://alexfreund381.github.io/healthy-hoyas-privacy/" class="policy-link" target="_blank">Privacy
+  Policy</a>
+          <a href="#" class="policy-link">Terms of Service</a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(212, 237, 218, 0.5);
+  font-size: 14px; color: #6b8e7a;">
+        <p>© 2025 Healthy Hoyas. Your wellness journey starts here.</p>
+      </div>
+    </div>
+  </body>
+  </html>
