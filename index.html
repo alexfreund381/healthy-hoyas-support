@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -200,6 +200,14 @@
         line-height: 1.5;
       }
 
+      .feature-highlight {
+        background: rgba(74, 222, 128, 0.05);
+        padding: 16px;
+        border-radius: 8px;
+        border-left: 3px solid #4ade80;
+        margin: 12px 0;
+      }
+
       /* Mobile responsiveness */
       @media (max-width: 768px) {
         body {
@@ -241,7 +249,8 @@
       <div class="subtitle">Healthy Hoyas</div>
       <p class="hero-text">
         We're here to help you on your wellness journey. Find answers to common questions below,
-        or reach out to our support team for personalized assistance.
+        or reach out to our support team for personalized assistance with Georgetown's most comprehensive nutrition and
+  wellness app.
       </p>
 
       <!-- FAQ Section -->
@@ -249,26 +258,82 @@
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
-          <div class="faq-question">How do I log my meals and track nutrition?</div>
+          <div class="faq-question">How do I log meals from Georgetown dining halls?</div>
           <div class="faq-answer">
-            Tap the "Food Log" tab, then use "+ Add Meal" to search for foods using our USDA database.
-            You can log breakfast, lunch, dinner, and snacks with detailed nutritional information.
+            Healthy Hoyas is integrated with Georgetown's dining services! You can easily log meals from Leo's, Epicurean, and
+   other campus dining locations.
+            The app automatically pulls nutritional data for dining hall items, making it seamless to track your on-campus
+  meals.
+            <div class="feature-highlight">
+              <strong>Pro tip:</strong> You can also search our comprehensive USDA and OpenFoodFacts databases for off-campus
+  meals and groceries.
+            </div>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">Can I change my nutrition goals after setting them up?</div>
+          <div class="faq-question">What nutritional information can I track?</div>
           <div class="faq-answer">
-            Yes! Go to the "Settings" tab and update your calorie goals, macro percentages, and micronutrient targets.
-            Changes will apply immediately to your daily tracking.
+            Track both macronutrients (calories, protein, carbs, fat) and micronutrients (vitamins, minerals, sodium, fiber,
+  and more).
+            Set personalized goals for each nutrient based on your dietary needs, activity level, and health objectives.
+            The app provides detailed breakdowns and progress tracking for comprehensive nutritional awareness.
+            <div class="feature-highlight">
+              <strong>Custom Goals:</strong> Adjust calorie targets, macro percentages, and micronutrient limits in Settings.
+            </div>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">How do I delete my account and data?</div>
+          <div class="faq-question">How does the activity and wellness tracking work?</div>
           <div class="faq-answer">
-            You can permanently delete your account from the "Settings" tab. This will remove all your data
-            including meal logs, weight tracking, and profile information from our servers.
+            Beyond nutrition, Healthy Hoyas helps you track your complete wellness picture:
+            <ul style="margin-top: 10px; padding-left: 20px;">
+              <li><strong>Steps:</strong> Log daily step counts and activity quality</li>
+              <li><strong>Sleep:</strong> Track sleep duration and quality ratings</li>
+              <li><strong>Weight:</strong> Monitor weight changes over time with goal tracking</li>
+              <li><strong>Analysis:</strong> View comprehensive charts showing trends, correlations, and progress across all
+  health metrics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I manually add foods not in the database?</div>
+          <div class="faq-answer">
+            Absolutely! While we have extensive USDA and OpenFoodFacts databases plus Georgetown dining integration,
+            you can manually enter custom foods with their nutritional information. This ensures you can log everything you
+  eat,
+            from homemade recipes to specialty items not in our databases.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I interpret the analysis charts and data?</div>
+          <div class="faq-answer">
+            The Analysis tab provides powerful insights into your health patterns:
+            <ul style="margin-top: 10px; padding-left: 20px;">
+              <li>Weekly and monthly nutrition trends</li>
+              <li>Activity vs. nutrition correlations</li>
+              <li>Goal achievement tracking across all metrics</li>
+              <li>Sleep and weight pattern analysis</li>
+            </ul>
+            Use these insights to make informed decisions about your diet, exercise, and lifestyle habits.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I change my nutrition and fitness goals?</div>
+          <div class="faq-answer">
+            Go to the "Settings" tab to update your goals anytime:
+            <ul style="margin-top: 10px; padding-left: 20px;">
+              <li>Calorie targets based on your activity level and goals</li>
+              <li>Macro percentage splits (protein, carbs, fat)</li>
+              <li>Micronutrient limits (sodium, sugar, vitamins, minerals)</li>
+              <li>Weight goals and target timeline</li>
+              <li>Activity and sleep targets</li>
+            </ul>
+            Changes apply immediately to your daily tracking and progress calculations.
           </div>
         </div>
       </div>
@@ -278,18 +343,28 @@
         <h2>Troubleshooting Tips</h2>
         <ul class="tips-list">
           <li>
-            <strong>App not loading?</strong> Try closing and reopening the app, or restart your device if the issue persists.
+            <strong>Georgetown dining data not loading?</strong> Check your internet connection. Campus dining integration
+  requires network access to pull the latest menu information.
           </li>
           <li>
-            <strong>Food search not working?</strong> Check your internet connection. The USDA food database requires an
-  active connection.
+            <strong>Food search not finding items?</strong> Try searching with different terms or check spelling. You can
+  search our USDA database, OpenFoodFacts, or switch to manual entry if needed.
           </li>
           <li>
-            <strong>Data not syncing?</strong> Make sure you're signed in to your account and have a stable internet
-  connection.
+            <strong>Charts not displaying properly?</strong> Make sure you have logged data for the time period you're
+  viewing. Analysis requires at least a few days of tracked information.
           </li>
           <li>
-            <strong>Forgot your password?</strong> Use the "Forgot Password" link on the login screen to reset it via email.
+            <strong>Data not syncing between sessions?</strong> Ensure you're signed in to your account and have a stable
+  internet connection. Your data is securely stored in the cloud.
+          </li>
+          <li>
+            <strong>Goal calculations seem off?</strong> Double-check your personal information (age, weight, activity level)
+  in Settings, as these affect calorie and nutrient recommendations.
+          </li>
+          <li>
+            <strong>App running slowly?</strong> Try closing other apps or restarting your device. Large amounts of historical
+   data may occasionally impact performance.
           </li>
         </ul>
       </div>
@@ -298,7 +373,7 @@
       <div class="section">
         <h2>Contact Support</h2>
         <div class="contact-info">
-          <p>Need more help? We're here for you!</p>
+          <p>Need more help? We're here to support your wellness journey!</p>
           <p>
             <a href="mailto:alex@freund25.com?subject=Healthy Hoyas Support" class="email-link">
               📧 alex@freund25.com
@@ -306,20 +381,20 @@
           </p>
           <div class="response-time">
             <strong>Response Time:</strong> We typically respond within 24-48 hours during business days.
+            <br><strong>Include:</strong> Your question, device type, and any error messages for faster assistance.
           </div>
         </div>
       </div>
 
       <!-- Legal Links Section -->
       <div class="section">
-        <h2>Legal & Privacy</h2>
+        <h2>Privacy & Data</h2>
         <p style="text-align: center; color: #6b8e7a; margin-bottom: 20px;">
-          Learn more about how we protect your data and our terms of service.
+          Your health data is private and secure. Learn more about how we protect your information.
         </p>
         <div class="links-section">
           <a href="https://alexfreund381.github.io/healthy-hoyas-privacy/" class="policy-link" target="_blank">Privacy
   Policy</a>
-          <a href="#" class="policy-link">Terms of Service</a>
         </div>
       </div>
 
@@ -331,3 +406,4 @@
     </div>
   </body>
   </html>
+
